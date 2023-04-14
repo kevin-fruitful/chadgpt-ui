@@ -14,12 +14,41 @@ This repo uses `Turbo` which is a monorepo package manager. This means we have m
 
 1.
 
-`yarn add langchain`
+```zsh
+yarn add langchain
+```
 
 2.
 
 We will use the workspace `test-exports-vercel`
 `package.json` scripts have been updated to only run the workspace we want.
+
+3.
+
+Go into the workspace we are using for the hackathon:
+
+```zsh
+cd test-exports-vercel
+```
+
+4.
+
+If there's no `.env` file:
+
+```zsh
+touch .env
+```
+
+Assign an OpenAI API key to the env var `OPENAI_API_KEY`
+We list all necessary env vars we have to set for this project in `.env.example`. DON'T SET THE API KEY in `.env.example`! Set it in `.env`.
+
+5.
+
+```zsh
+yarn dev
+```
+
+Starts the server on `http://localhost:3000`
 
 ```typescript
 import { OpenAI } from "langchain/llms/openai";
