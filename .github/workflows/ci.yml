@@ -72,7 +72,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build
-        run: yarn run build --filter="!docs"
+        run: yarn run build --filter="!docs,!test-exports-cf,!test-exports-cjs,!test-exports-esm,!test-exports-vite"
       - name: Test
         run: yarn run test:unit
 
@@ -89,6 +89,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build
-        run: yarn run build --filter="!docs"
+        run: yarn run build --filter="!docs,!test-exports-cf,!test-exports-cjs,!test-exports-esm,!test-exports-vite"
       - name: Test Exports
         run: yarn run test:exports:docker
