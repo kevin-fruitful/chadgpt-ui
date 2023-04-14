@@ -25,22 +25,22 @@ We will use the workspace `test-exports-vercel`
 
 3.
 
-Go into the workspace we are using for the hackathon:
-
-```zsh
-cd test-exports-vercel
-```
-
-4.
-
 If there's no `.env` file:
 
 ```zsh
 touch .env
 ```
 
-Assign an OpenAI API key to the env var `OPENAI_API_KEY`
+Assign an OpenAI API key to the env var `NEXT_PUBLIC_OPENAI_API_KEY`
 We list all necessary env vars we have to set for this project in `.env.example`. DON'T SET THE API KEY in `.env.example`! Set it in `.env`.
+
+4.
+
+Go into the workspace we are using for the hackathon:
+
+```zsh
+cd test-exports-vercel
+```
 
 5.
 
