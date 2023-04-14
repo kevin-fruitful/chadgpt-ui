@@ -7,9 +7,19 @@
 **Production Support:** As you move your LangChains into production, we'd love to offer more comprehensive support.
 Please fill out [this form](https://forms.gle/57d8AmXBYp8PP8tZA) and we'll set up a dedicated support Slack channel.
 
-## Quick Install
+## ~ START HERE ETH TOKYO TEAM ~
+
+This is forked from [langchainjs] (https://github.com/hwchase17/langchainjs).
+This repo uses `Turbo` which is a monorepo package manager. This means we have multiple "workspaces" in a single repo.
+
+1.
 
 `yarn add langchain`
+
+2.
+
+We will use the workspace `test-exports-vercel`
+`package.json` scripts have been updated to only run the workspace we want.
 
 ```typescript
 import { OpenAI } from "langchain/llms/openai";

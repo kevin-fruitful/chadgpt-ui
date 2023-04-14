@@ -22,18 +22,18 @@
   },
   "packageManager": "yarn@3.4.1",
   "scripts": {
-    "ci": "turbo run ci",
-    "build": "turbo run build",
-    "format": "turbo run format",
-    "format:check": "turbo run format:check",
-    "lint": "turbo run lint",
+    "ci": "turbo run ci --filter=test-exports-vercel",
+    "build": "turbo run build --filter=test-exports-vercel",
+    "format": "turbo run format --filter=test-exports-vercel",
+    "format:check": "turbo run format:check --filter=test-exports-vercel",
+    "lint": "turbo run lint --filter=test-exports-vercel",
     "lint:fix": "yarn lint -- --fix",
-    "test": "turbo run test test:integration && yarn test:exports:docker",
+    "test": "turbo run test test:integration --filter=test-exports-vercel && yarn test:exports:docker",
     "test:unit": "turbo run test",
     "test:int": "turbo run test:integration",
     "test:exports:docker": "docker compose up",
     "publish": "bash scripts/release-branch.sh && turbo run build lint test test:integration && yarn run test:exports:docker && yarn workspace langchain run release && echo '🔗 Open https://github.com/hwchase17/langchainjs/compare/release?expand=1 and merge the release PR'",
-    "example": "turbo run start --filter examples --",
+    "example": "turbo run start --filter test-exports-vercel",
     "prepare": "husky install",
     "precommit": "turbo run precommit",
     "docs": "yarn workspace docs start"
@@ -49,6 +49,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "langchain": "workspace:^",
     "turbo": "^1.7.4"
   },
   "resolutions": {
