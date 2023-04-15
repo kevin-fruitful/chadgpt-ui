@@ -1,6 +1,7 @@
 // components/IndexCodebaseForm.tsx
 import { useState, ChangeEvent, FormEvent } from "react";
 import { indexCodebase } from "../api/index-codebase";
+import styles from "@/styles/Home.module.css";
 
 function IndexCodebaseForm() {
   const [gitUrl, setGitUrl] = useState("");
@@ -23,17 +24,18 @@ function IndexCodebaseForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.urlForm}>
       <input
         type="text"
         value={gitUrl}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           setGitUrl(e.target.value)
         }
-        placeholder="Enter Git URL"
+        className={styles.gitUrlInput}
+        placeholder="Enter github repo link or prompt"
       />
-      <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Indexing..." : "Index Codebase"}
+      <button type="submit" disabled={isSubmitting} className={styles.submitButton}>
+        {isSubmitting ? "Chadifying..." : "Chadify My Contract"}
       </button>
     </form>
   );

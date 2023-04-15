@@ -1,10 +1,133 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: #FFF;
+  padding: 120px 160px;
+}
+
+.introTitle {
+  font-weight: 700;
+  font-size: 56px;
+  color: #000000;
+  font-family: 'Comic Neue';
+  margin-bottom: 36px;
+}
+
+.introDescription {
+  width: 500px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Comic Neue';
+}
+
+.urlForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.gitUrlInput {
+  border: none;
+  border: 6px solid #DADADA;
+  border-radius: 16px;
+  width: 475px;
+  height: 93px;
+  outline: none;
+}
+
+.gitUrlInput[type="text"] {
+  font-size: 24px;
+  padding: 36px;
+}
+
+.gitUrlInput::placeholder {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: 'Comic Neue';
+  color: #000000;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButton {
+  background-color: #000000;
+  margin-top: 27px;
+  padding: 32px 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: #FFF;
+  font-family: 'Comic Neue';
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.hereYouGot {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 24px;
+}
+
+.safeText {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  width: 715px;
+  margin-bottom: 12px;
+}
+
+.qaTitle {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  margin: 48px 0 36px;
+}
+
+.qaBox {
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: flex-start;
+  width: 715px;
+}
+
+.q {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  margin-bottom: 12px;
+}
+
+.a {
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5em;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .description {
@@ -143,11 +266,9 @@
   inset: 0;
   padding: 1px;
   border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
+  background: linear-gradient(to bottom right,
+      rgba(var(--tile-start-rgb), 1),
+      rgba(var(--tile-end-rgb), 1));
   background-clip: content-box;
 }
 
@@ -226,11 +347,9 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
+    background: linear-gradient(to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--callout-rgb), 0.5));
     background-clip: padding-box;
     backdrop-filter: blur(24px);
   }
@@ -241,11 +360,9 @@
     inset: auto 0 0;
     padding: 2rem;
     height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgb(var(--background-end-rgb)) 40%);
     z-index: 1;
   }
 }
@@ -272,6 +389,7 @@
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }
