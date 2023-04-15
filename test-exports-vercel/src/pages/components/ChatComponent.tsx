@@ -16,13 +16,16 @@ const ChatComponent: React.FC = () => {
     if (!question.trim()) return;
 
     setIsLoading(true);
-    const response = await fetch("/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ question, chat_history: chatHistory }),
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/chat`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ question, chat_history: chatHistory }),
+      }
+    );
 
     const data = await response.json();
     setChatHistory([...chatHistory, { question, answer: data.answer }]);
@@ -32,7 +35,7 @@ const ChatComponent: React.FC = () => {
 
   return (
     <div>
-      <h1>Chat with AI</h1>
+      <h1>Ask questions about your codebase</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -45,16 +48,18 @@ const ChatComponent: React.FC = () => {
         </button>
       </form>
       <div>
-        {chatHistory.map((entry, index) => (
-          <div key={index}>
-            <p>
-              <strong>Question:</strong> {entry.question}
-            </p>
-            <p>
-              <strong>Answer:</strong> {entry.answer}
-            </p>
-          </div>
-        ))}
+        {chatHistory.map((entry, index) => {
+          return (
+            <div key={index}>
+              <p>
+                <strong>Question:</strong> {entry.question}
+              </p>
+              <p>
+                <strong>Answer:</strong> {entry.answer}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,21 +1,19 @@
 // utils/api.ts
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
-
 interface IndexCodebaseResponse {
   // Define the shape of your API response here
   success: boolean;
   message: string;
 }
-
 export async function indexCodebase(
   gitUrl: string
 ): Promise<IndexCodebaseResponse> {
   try {
+    const normalizedGitUrl = gitUrl.endsWith(".git") ? gitUrl : `${gitUrl}.git`;
     const response = await axios.post<IndexCodebaseResponse>(
-      `${API_URL}/api/index_codebase`,
-      { git_url: gitUrl }
+      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/index_codebase`,
+      { git_url: normalizedGitUrl }
     );
     return response.data;
   } catch (error) {
