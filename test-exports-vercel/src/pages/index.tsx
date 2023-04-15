@@ -13,6 +13,7 @@ import {
   HumanMessagePromptTemplate,
 } from "langchain/prompts";
 import IndexCodebaseForm from "./components/IndexCodebaseForm";
+import ChatComponent from "./components/ChatComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,7 +58,8 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Index a Codebase</h1>
         <IndexCodebaseForm />
-
+        <h2>Chat with me</h2>
+        <ChatComponent />
         {/* <button onClick={runChain}>Click to run a chain</button> */}
       </main>
     </>
