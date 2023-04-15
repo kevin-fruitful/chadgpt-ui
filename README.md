@@ -42,7 +42,12 @@ Go into the workspace we are using for the hackathon:
 cd test-exports-vercel
 ```
 
-5.
+5. 
+```zsh
+yarn build
+```
+
+6.
 
 ```zsh
 yarn dev
