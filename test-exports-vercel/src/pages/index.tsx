@@ -105,7 +105,8 @@ export default function Home() {
         </div>
         <div className={styles.qaBox}>
           <span className={styles.q}>What tools are you using?</span>
-          <span className={styles.a}>- LangChain.js</span>
+          <span className={styles.a}>- Filecoin Virtual Machine</span>
+          <span className={styles.a}>- LangChain</span>
           <span className={styles.a}>- DeFi Hack Labs repo</span>
           <span className={styles.a}>- ChatGPT API</span>
         </div>
