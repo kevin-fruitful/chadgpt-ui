@@ -59,6 +59,14 @@ Starts the server on `http://localhost:3000`
 import { OpenAI } from "langchain/llms/openai";
 ```
 
+## Repositories to scrape
+
+https://github.com/SunWeb3Sec/DeFiHackLabs
+
+Docs to scrape
+
+https://book.getfoundry.sh/tutorials/best-practices
+
 ## 🤔 What is this?
 
 Large language models (LLMs) are emerging as a transformative technology, enabling
