@@ -80,8 +80,6 @@ export default function Home() {
           width={195}
           style={{ marginBottom: 36 }}
         />
-
-        <p className={styles.hereYouGot}>Here’s What You Get BB</p>
         <Image
           src={howToDo}
           alt="howToDo"
