@@ -1,29 +1,35 @@
-# 🦜️🔗 LangChain.js
+# ChadGPT UI
 
-⚡ Building applications with LLMs through composability ⚡
+This is forked from [langchainjs](https://github.com/hwchase17/langchainjs).
+[Backend](https://github.com/kevin-fruitful/chadgpt-backend)
 
-[![CI](https://github.com/hwchase17/langchainjs/actions/workflows/ci.yml/badge.svg)](https://github.com/hwchase17/langchainjs/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/langchainai.svg?style=social&label=Follow%20%40LangChainAI)](https://twitter.com/langchainai) [![](https://dcbadge.vercel.app/api/server/6adMQxSpJS?compact=true&style=flat)](https://discord.gg/6adMQxSpJS)
+ChadGPT UI is the frontend code for the ETH Tokyo 2023 Hackathon ChadGPT project.
 
-**Production Support:** As you move your LangChains into production, we'd love to offer more comprehensive support.
-Please fill out [this form](https://forms.gle/57d8AmXBYp8PP8tZA) and we'll set up a dedicated support Slack channel.
+[ETH Global ChadGPT showcase](https://ethglobal.com/showcase/chadgpt-kikng)
 
-## ~ START HERE ETH TOKYO TEAM ~
+Thank you to [Filecoin FVM](https://fvm.filecoin.io/) for awarding us with a prize!
 
-This is forked from [langchainjs] (https://github.com/hwchase17/langchainjs).
+## Getting Started
+
 This repo uses `Turbo` which is a monorepo package manager. This means we have multiple "workspaces" in a single repo.
 
-1.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+Clone the repository.
+
+Install `langchain`
 
 ```zsh
 yarn add langchain
 ```
 
-2.
-
 We will use the workspace `test-exports-vercel`
 `package.json` scripts have been updated to only run the workspace we want.
-
-3.
 
 If there's no `.env` file:
 
@@ -34,20 +40,9 @@ touch .env
 Assign an OpenAI API key to the env var `NEXT_PUBLIC_OPENAI_API_KEY`
 We list all necessary env vars we have to set for this project in `.env.example`. DON'T SET THE API KEY in `.env.example`! Set it in `.env`.
 
-4.
-
-Go into the workspace we are using for the hackathon:
-
-```zsh
-cd test-exports-vercel
-```
-
-5. 
 ```zsh
 yarn build
 ```
-
-6.
 
 ```zsh
 yarn dev
@@ -55,39 +50,23 @@ yarn dev
 
 Starts the server on `http://localhost:3000`
 
-```typescript
-import { OpenAI } from "langchain/llms/openai";
-```
+## Built With
 
-## Repositories to scrape
+- [next.js](https://github.com/vercel/next.js/)
+- [langchainjs](https://github.com/hwchase17/langchainjs)
 
-https://github.com/SunWeb3Sec/DeFiHackLabs
+## ETH Tokyo ChadGPT Team
 
-Docs to scrape
+- [Kevin Park](https://github.com/kevin-fruitful) [@kevin-fruitful](https://github.com/kevin-fruitful)
+- [Ariel Chen](https://github.com/Arielpopcorn) [@Arielpopcorn](https://github.com/Arielpopcorn)
+- [Caitlin Zhang](https://github.com/caitlinthebest) [@caitlinthebest](https://github.com/caitlinthebest)
+- [Tesa Ho](https://github.com/tesaho) [@tesaho](https://github.com/tesaho)
+- [Tim Cox](https://github.com/timncox) [@timncox](https://github.com/timncox)
 
-https://book.getfoundry.sh/tutorials/best-practices
+## Acknowledgments
 
-## 🤔 What is this?
-
-Large language models (LLMs) are emerging as a transformative technology, enabling
-developers to build applications that they previously could not.
-But using these LLMs in isolation is often not enough to
-create a truly powerful app - the real power comes when you can combine them with other sources of computation or knowledge.
-
-This library is aimed at assisting in the development of those types of applications.
-
-## 📖 Full Documentation
-
-For full documentation of prompts, chains, agents and more, please see [here](https://js.langchain.com/docs/).
-
-## Relationship with Python LangChain
-
-This is built to integrate as seamlessly as possible with the [LangChain Python package](https://github.com/hwchase17/langchain). Specifically, this means all objects (prompts, LLMs, chains, etc) are designed in a way where they can be serialized and shared between languages.
-
-The [LangChainHub](https://github.com/hwchase17/langchain-hub) is a central place for the serialized versions of these prompts, chains, and agents.
-
-## 💁 Contributing
-
-As an open source project in a rapidly developing field, we are extremely open to contributions, whether it be in the form of a new feature, improved infra, or better documentation.
-
-Check out [our contributing guidelines](CONTRIBUTING.md) for instructions on how to contribute.
+- The ETH Tokyo Hackathon organizers and sponsors for providing the opportunity to build this project.
+- The amazing mentors and fellow participants at ETH Tokyo for their support and collaboration.
+-- Special shoutout to [Cole Perkins](https://twitter.com/coleperkins_)
+-- Special shoutout to [Jeff Lau](https://github.com/jefflau) [@jefflau](https://github.com/jefflau)
+- Everyone who has contributed to the open-source tools and libraries used in this project.
